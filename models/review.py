@@ -3,8 +3,6 @@
 Review module for the HBNB project
 """
 
-import models
-import sqlalchemy
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String, Text, ForeignKey
 from sqlalchemy.orm import relationship
