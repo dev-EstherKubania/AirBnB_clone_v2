@@ -8,6 +8,8 @@ from os import getenv
 import sqlalchemy
 from sqlalchemy import Column, String, Integer, Float, ForeignKey, Table
 from sqlalchemy.orm import relationship
+import Amenity
+import Review
 
 if models.storage_t == 'db':
     place_amenity = Table('place_amenity', Base.metadata,
