@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" City Module for HBNB project """
+"""
+City Module for HBNB project
+"""
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import relationship
@@ -9,7 +11,9 @@ storage_type = getenv("HBNB_TYPE_STORAGE")
 
 
 class City(BaseModel, Base):
-    """The city class, contains state ID and name"""
+    """
+    The city class, contains state ID and name
+    """
 
     __tablename__ = "cities"
     if storage_type == "db":
