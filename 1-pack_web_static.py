@@ -31,7 +31,7 @@ def do_pack():
         print("Failed to create archive.")
         return None
 
+
 local("pycodestyle --ignore=E501 script_name.py")
 
 do_pack()
-
