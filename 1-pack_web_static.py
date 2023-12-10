@@ -32,6 +32,4 @@ def do_pack():
         return None
 
 
-local("pycodestyle --ignore=E501 script_name.py")
-
 do_pack()
