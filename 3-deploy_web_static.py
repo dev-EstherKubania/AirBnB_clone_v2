@@ -8,6 +8,7 @@ from fabric.api import put, local, env, run
 env.hosts = ["34.232.70.187", "34.204.101.142"]
 
 
+@task
 def do_pack():
     """
     Function Docs
@@ -24,6 +25,7 @@ def do_pack():
         return None
 
 
+@task
 def do_deploy(archive_path):
     """
     Function Docs
@@ -51,6 +53,7 @@ def do_deploy(archive_path):
         return False
 
 
+@task
 def deploy():
     """
     Function Docs
