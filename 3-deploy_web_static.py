@@ -11,7 +11,6 @@ env.hosts = ["34.232.70.187", "34.204.101.142"]
 env.user = "ubuntu"
 
 
-
 @task
 def do_pack():
     """
