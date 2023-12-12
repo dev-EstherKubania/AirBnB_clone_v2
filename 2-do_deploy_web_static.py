@@ -27,17 +27,17 @@ def do_deploy(archive_path):
         release_folder = '/data/web_static/releases/{}'.format(
             archive_filename.split(".")[0]
         )
-        run('mkdir -p {}'.format(release_folder))
-        run('tar -xzf /tmp/{} -C {}'.format(archive_filename, release_folder))
+        run('sudo mkdir -p {}'.format(release_folder))
+        run('sudo tar -xzf /tmp/{} -C {}'.format(archive_filename, release_folder))
 
         # Delete the archive from the web server
-        run('rm /tmp/{}'.format(archive_filename))
+        run('sudo rm /tmp/{}'.format(archive_filename))
 
         # Delete the symbolic link /data/web_static/current
-        run('rm -f /data/web_static/current')
+        run('sudo rm -f /data/web_static/current')
 
         # Create a new symbolic link /data/web_static/current
-        run('ln -s {} /data/web_static/current'.format(release_folder))
+        run('sudo ln -s {} /data/web_static/current'.format(release_folder))
 
         print("New version deployed!")
         return True
